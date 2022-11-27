@@ -5,14 +5,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import ru.almukanov.config.Browsers;
 
 public class Config {
     private static WebDriver webDriver = null;
-    public static WebDriver getDriver(String browser){
-
-        switch (browser){
-            case "chrome":webDriver =new ChromeDriver(); break;
-            case "firefox":webDriver =new FirefoxDriver(); break;
+    public static WebDriver getDriver(int index){
+        Browsers brow = Browsers.values()[index];
+        switch (index){
+            case 1:webDriver =new ChromeDriver(); break;
+            case 2:webDriver =new FirefoxDriver(); break;
         }
         return webDriver;
     }

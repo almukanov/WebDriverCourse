@@ -10,7 +10,7 @@ import java.time.Duration;
 
 public class Task1Test {
     public static void main(String[] args) {
-        WebDriver driver = Config.getDriver("chrome");
+        WebDriver driver = Config.getDriver(1);
         Config.openWebSite(Constans.KRISHA);
         WebElement sincePrice = Config.getXpathElement("//input[@type='text' and @placeholder='От']");
         WebElement endPrice = Config.getXpathElement("//input[@type='text' and @placeholder='До']");

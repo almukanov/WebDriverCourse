@@ -10,7 +10,7 @@ import java.time.Duration;
 
 public class Task2Test {
     public static void main(String[] args) {
-        WebDriver driver = Config.getDriver("chrome");
+        WebDriver driver = Config.getDriver(1);
         Config.openWebSite("https://github.com/login");
         Config.getNameElement("login").sendKeys(Constans.GIT_LOGIN);
         Config.getNameElement("password").sendKeys(Constans.GIT_PASS);
