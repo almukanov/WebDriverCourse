@@ -6,6 +6,9 @@ public class Constans {
             "git push origin master --force";
     public final static String KRISHA = "https://krisha.kz/";
     public final static String GIST_GIT = "https://gist.github.com/";
+    public final static String PASTEBIN_URL = "https://pastebin.com/";
     public final static String GIT_LOGIN = "gitForAnyTest";
     public final static String GIT_PASS = "Q!q1q1Q!";
+    public final static String PRICE_URL = "https://azure.microsoft.com/en-us/pricing/calculator/";
+
 }
