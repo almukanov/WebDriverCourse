@@ -1,7 +1,6 @@
 package ru.almukanov.task3;
 
-import com.sun.org.apache.bcel.internal.Const;
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -12,7 +11,7 @@ import ru.almukanov.driver.Driver;
 import ru.almukanov.page.MainPage;
 
 import java.time.Duration;
-import java.util.List;
+
 
 public class TaskThreeTest {
     WebDriver driver = Driver.getDriver(1);
