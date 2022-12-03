@@ -1,17 +1,13 @@
 package ru.almukanov.task1;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import ru.almukanov.config.Constans;
 import ru.almukanov.driver.Driver;
 import ru.almukanov.page.MainPage;
-
 import java.time.Duration;
 import java.util.List;
 
@@ -25,7 +21,7 @@ public class TaskOneTest {
         pastebin.openWebSite(Constans.PASTEBIN_URL);
 
         WebElement textArea = pastebin.getIdElement ("postform-text");
-        textArea.sendKeys("Hello from WebDriver");
+        textArea.sendKeys(Constans.TEXT_FIRST_TASK);
         WebElement exp = pastebin.getXpathElement("//*[@id='select2-postform-expiration-container']");
         exp.click();
         WebElement listExpiration= pastebin.getIdElement("select2-postform-expiration-results");
