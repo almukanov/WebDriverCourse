@@ -65,8 +65,11 @@ public class TaskTwoTest {
         WebElement code = pastebin.getXpathElement("//ol");
         List<WebElement> codes=code.findElements(By.tagName("li"));
         StringBuilder text = new StringBuilder();
-        for (WebElement li : codes) {
-         text.append(li);
+        for (int i = 0; i < codes.size(); i++) {
+            if(i == codes.size()-1){
+                text.append(codes.get(i).getText());
+            } else
+            text.append(codes.get(i).getText()).append("\n");
         }
         assertEquals(Constans.TEST_TEXT_TASK_2,text.toString(),"Equals texts");
         driver.close();

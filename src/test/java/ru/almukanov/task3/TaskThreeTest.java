@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.almukanov.config.Constans;
 import ru.almukanov.driver.Driver;
@@ -19,8 +20,6 @@ public class TaskThreeTest {
     MainPage mainPage = new MainPage(driver, webDriverWait);
     @Test
     public void shouldDoTaskThree(){
-
-
         mainPage.openWebSite(Constans.PRICE_URL);
         WebElement btn = mainPage.getXpathElement("//button[@title='Virtual Machines']");
         btn.click();
@@ -34,6 +33,11 @@ public class TaskThreeTest {
         vm.sendKeys("5");
         WebElement compute = mainPage.getXpathElement("//input[@value='sv-three-year']");
         compute.click();
+
+        WebElement total = mainPage.getXpathElement("//div[@class='total'][2]//span[@class='numeric']");
+        String totalSum = total.getText();
+        System.out.println(totalSum);
+        Assert.assertTrue(totalSum.contains("$823.22"), "Check total sum");
         driver.close();
     }
 }
