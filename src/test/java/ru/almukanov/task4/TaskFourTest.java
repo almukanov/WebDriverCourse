@@ -3,8 +3,6 @@ package ru.almukanov.task4;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
@@ -13,7 +11,6 @@ import ru.almukanov.driver.Driver;
 import ru.almukanov.page.MainPage;
 
 import java.time.Duration;
-import java.util.HashMap;
 
 
 public class TaskFourTest {
@@ -47,19 +44,19 @@ public class TaskFourTest {
          */
         mainPage.openWebSite(Constans.MAIL_URL);
         WebElement login = mainPage.getNameElement("username");
-        login.sendKeys("for_dif_tests@mail.ru");
+        login.sendKeys(Constans.EMAIL_ADDRESS_AUTH);
         WebElement btnNext = mainPage.getXpathElement("//button[@data-test-id='next-button']");
         btnNext.submit();
         WebElement password = mainPage.getXpathElement("//input[@name='password']");
         WebElement btnEnter = mainPage.getXpathElement("//button[@data-test-id='submit-button']");
-        password.sendKeys("Te$ting!!!");
+        password.sendKeys(Constans.EMAIL_PASSWORD_AUTH);
         btnEnter.submit();
         mainPage.openWebSite("https://e.mail.ru/compose/");
         mainPage.openWebSite("https://e.mail.ru/compose/");
         WebElement address = mainPage.getXpathElement("/html/body/div[1]/div/div[2]/div/div/div/div[2]/div[3]/div[2]/div/div/div[1]/div/div[2]/div/div/label/div/div/input");
-        address.sendKeys("ruslan@almukanov.ru");
+        address.sendKeys(Constans.EMAIL_ADDRESS_TO);
         WebElement subject = mainPage.getNameElement("Subject");
-        subject.sendKeys("Computing pricing");
+        subject.sendKeys(Constans.EMAIL_SUBJECT);
         WebElement attachFile = mainPage.getXpathElement("//button[@class='container--2lPGK type_wide--2kyds color_base--hO-yz hoverable--2qtk5']//input[@type='file']");
         attachFile.sendKeys(downloadFilepath + "/ExportedEstimate.xlsx");
         WebElement sendBtn = mainPage.getXpathElement("//button[@data-test-id='send']");
