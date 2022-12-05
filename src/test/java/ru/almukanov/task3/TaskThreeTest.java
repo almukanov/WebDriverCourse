@@ -38,6 +38,6 @@ public class TaskThreeTest {
         String totalSum = total.getText();
         System.out.println(totalSum);
         Assert.assertTrue(totalSum.contains("$823.22"), "Check total sum");
-        driver.close();
+        Driver.closeDriver();
     }
 }

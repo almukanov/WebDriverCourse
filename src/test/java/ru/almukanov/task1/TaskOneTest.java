@@ -34,7 +34,7 @@ public class TaskOneTest {
         }
         WebElement title = pastebin.getIdElement("postform-name");
         title.sendKeys("helloweb");
-        driver.close();
+        Driver.closeDriver();
 
     }
 

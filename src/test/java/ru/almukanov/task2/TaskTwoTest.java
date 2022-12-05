@@ -72,7 +72,7 @@ public class TaskTwoTest {
             text.append(codes.get(i).getText()).append("\n");
         }
         assertEquals(Constans.TEST_TEXT_TASK_2,text.toString(),"Equals texts");
-        driver.close();
+        Driver.closeDriver();
     }
 
 }

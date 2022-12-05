@@ -5,6 +5,7 @@ public class Constans {
             "git reset $(git commit-tree HEAD^{tree} -m \"Legacy code\")\n" +
             "git push origin master --force";
     public final static String PASTEBIN_URL = "https://pastebin.com/";
+    public final static String MAIL_URL = "https://account.mail.ru/login";
     public final static String TEXT_FIRST_TASK = "Hello from WebDriver";
     public final static String PRICE_URL = "https://azure.microsoft.com/en-us/pricing/calculator/";
 
